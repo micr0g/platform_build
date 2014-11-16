@@ -1469,7 +1469,7 @@ name := $(TARGET_PRODUCT)
 ifeq ($(TARGET_BUILD_TYPE),debug)
   name := $(name)
 endif
-name := $(name)-(shell date +%m%d%H%M)
+name := $(name)-$(shell date +%m%d%H%M)
 
 INTERNAL_OTA_PACKAGE_TARGET := $(PRODUCT_OUT)/$(name).zip
 
