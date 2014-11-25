@@ -127,7 +127,7 @@ endif
 # in their exported C++ functions). Also, GCC 4.5 has already
 # removed the warning from the compiler.
 #
-$(combo_2nd_arch_prefix)TARGET_GLOBAL_CFLAGS += -Wno-psabi
+$(combo_2nd_arch_prefix)TARGET_GLOBAL_CFLAGS += -Wno-psabi -Wno-array-bounds
 
 $(combo_2nd_arch_prefix)TARGET_GLOBAL_LDFLAGS += \
 			-Wl,-z,noexecstack \
