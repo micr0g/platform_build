@@ -43,6 +43,8 @@ CLANG_CONFIG_EXTRA_CFLAGS += \
   -Werror=int-conversion
 
 CLANG_CONFIG_UNKNOWN_CFLAGS := \
+  -fgcse-las \
+  -fgcse-sm \
   -fmodulo-sched \
   -fmodulo-sched-allow-regmoves \
   -funswitch-loops \
