@@ -136,6 +136,7 @@ $(combo_2nd_arch_prefix)TARGET_GLOBAL_LDFLAGS += \
 			-Wl,--warn-shared-textrel \
 			-Wl,--fatal-warnings \
 			-Wl,--icf=safe \
+      -Wl,-O1 -Wl,--as-needed -Wl,--relax -Wl,--sort-common -Wl,--gc-sections \
 			$(arch_variant_ldflags)
 
 $(combo_2nd_arch_prefix)TARGET_GLOBAL_CFLAGS += -mthumb-interwork
