@@ -71,14 +71,16 @@ $(combo_2nd_arch_prefix)TARGET_arm_CFLAGS :=    -O2 \
                         -fomit-frame-pointer \
                         -fstrict-aliasing    \
                         -funswitch-loops     \
-                        -ftree-vectorize
+                        -ftree-vectorize \
+                        -fgcse-sm -fgcse-las -fgcse-after-reload
 
 # Modules can choose to compile some source as thumb.
 $(combo_2nd_arch_prefix)TARGET_thumb_CFLAGS :=  -mthumb \
                         -O2 \
                         -fomit-frame-pointer \
                         -fno-strict-aliasing \
-                        -ftree-vectorize
+                        -ftree-vectorize \
+                        -fgcse-sm -fgcse-las -fgcse-after-reload \
 
 # Set FORCE_ARM_DEBUGGING to "true" in your buildspec.mk
 # or in your environment to force a full arm build, even for
@@ -150,7 +152,7 @@ $(combo_2nd_arch_prefix)TARGET_RELEASE_CFLAGS := \
 			-DNDEBUG \
 			-g \
 			-Wstrict-aliasing=2 \
-			-fgcse-after-reload \
+      -fgcse-sm -fgcse-las -fgcse-after-reload \
 			-frerun-cse-after-loop \
 			-frename-registers \
       -ftree-vectorize
