@@ -43,6 +43,8 @@ CLANG_CONFIG_EXTRA_CFLAGS += \
   -Werror=int-conversion
 
 CLANG_CONFIG_UNKNOWN_CFLAGS := \
+  -fmodulo-sched \
+  -fmodulo-sched-allow-regmoves \
   -funswitch-loops \
   -fno-tree-sra \
   -finline-limit=64 \
