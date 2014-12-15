@@ -72,7 +72,8 @@ $(combo_2nd_arch_prefix)TARGET_arm_CFLAGS :=    -O3 \
                         -fstrict-aliasing    \
                         -funswitch-loops     \
                         -ftree-vectorize \
-                        -fgcse-sm -fgcse-las -fgcse-after-reload
+                        -fgcse-sm -fgcse-las -fgcse-after-reload \
+                        -pipe
 
 # Modules can choose to compile some source as thumb.
 $(combo_2nd_arch_prefix)TARGET_thumb_CFLAGS :=  -mthumb \
@@ -81,7 +82,8 @@ $(combo_2nd_arch_prefix)TARGET_thumb_CFLAGS :=  -mthumb \
                         -fno-strict-aliasing \
                         -ftree-vectorize \
                         -fgcse-sm -fgcse-las -fgcse-after-reload \
-                        -Wno-strict-overflow
+                        -Wno-strict-overflow \
+                        -pipe
 
 # Set FORCE_ARM_DEBUGGING to "true" in your buildspec.mk
 # or in your environment to force a full arm build, even for
