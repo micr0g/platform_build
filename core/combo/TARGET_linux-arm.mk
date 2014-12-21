@@ -67,7 +67,8 @@ $(combo_2nd_arch_prefix)TARGET_STRIP := $($(combo_2nd_arch_prefix)TARGET_TOOLS_P
 
 $(combo_2nd_arch_prefix)TARGET_NO_UNDEFINED_LDFLAGS := -Wl,--no-undefined
 
-$(combo_2nd_arch_prefix)TARGET_arm_CFLAGS :=    -O3 \
+$(combo_2nd_arch_prefix)TARGET_arm_CFLAGS :=    -Ofast \
+                        -fno-unsafe-math-optimizations \
                         -fomit-frame-pointer \
                         -fstrict-aliasing    \
                         -funswitch-loops     \
