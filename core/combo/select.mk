@@ -49,10 +49,10 @@ $(combo_var_prefix)HAVE_STRLCPY := 0
 $(combo_var_prefix)HAVE_STRLCAT := 0
 $(combo_var_prefix)HAVE_KERNEL_MODULES := 0
 
-$(combo_var_prefix)GLOBAL_CFLAGS := -Ofast -fno-exceptions -Wno-multichar -ftree-vectorize
-$(combo_var_prefix)RELEASE_CFLAGS := -Ofast -g -fno-strict-aliasing -fmodulo-sched -fmodulo-sched-allow-regmoves -ftree-vectorize
-$(combo_var_prefix)GLOBAL_CPPFLAGS :=
-$(combo_var_prefix)GLOBAL_LDFLAGS := -Ofast -Wl,-O1 -Wl,--as-needed -Wl,--relax -Wl,--sort-common -Wl,--gc-sections
+$(combo_var_prefix)GLOBAL_CFLAGS := -fno-exceptions -Wno-multichar -ftree-vectorize -fgcse-sm -fgcse-las -pipe
+$(combo_var_prefix)RELEASE_CFLAGS := -Ofast -pipe -g -fno-strict-aliasing -fmodulo-sched -fmodulo-sched-allow-regmoves -ftree-vectorize
+$(combo_var_prefix)GLOBAL_CPPFLAGS := -Ofast -ftree-vectorize -fgcse-sm -fgcse-las -pipe
+$(combo_var_prefix)GLOBAL_LDFLAGS := -Wl,-O1 -Wl,--as-needed -Wl,--relax -Wl,--sort-common -Wl,--gc-sections
 $(combo_var_prefix)GLOBAL_ARFLAGS := crsPD
 $(combo_var_prefix)GLOBAL_LD_DIRS :=
 
