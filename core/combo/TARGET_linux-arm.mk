@@ -74,7 +74,7 @@ $(combo_2nd_arch_prefix)TARGET_arm_CFLAGS :=    -Ofast \
                         -funswitch-loops     \
                         -ftree-vectorize \
                         -fgcse-sm -fgcse-las -fgcse-after-reload \
-                        -pipe
+                        -pipe -fivopts
 
 # Modules can choose to compile some source as thumb.
 $(combo_2nd_arch_prefix)TARGET_thumb_CFLAGS :=  -mthumb \
@@ -84,7 +84,7 @@ $(combo_2nd_arch_prefix)TARGET_thumb_CFLAGS :=  -mthumb \
                         -ftree-vectorize \
                         -fgcse-sm -fgcse-las -fgcse-after-reload \
                         -Wno-strict-overflow \
-                        -pipe
+                        -pipe -fivopts
 
 # Set FORCE_ARM_DEBUGGING to "true" in your buildspec.mk
 # or in your environment to force a full arm build, even for
@@ -160,6 +160,7 @@ $(combo_2nd_arch_prefix)TARGET_RELEASE_CFLAGS := \
 			-frerun-cse-after-loop \
 			-frename-registers \
       -ftree-vectorize \
+      -pipe -fivopts \
       -Wno-strict-overflow
 
 libc_root := bionic/libc
