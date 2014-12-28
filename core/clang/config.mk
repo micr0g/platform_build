@@ -31,8 +31,8 @@ endif
 
 # Clang flags for all host or target rules
 CLANG_CONFIG_EXTRA_ASFLAGS :=
-CLANG_CONFIG_EXTRA_CFLAGS := -Ofast -fvectorize -fstrict-aliasing -munaligned-access -fslp-vectorize-aggressive -mllvm -bb-vectorize-aligned-only -pipe -Qunused-arguments -Wno-unknown-warning-option
-CLANG_CONFIG_EXTRA_CPPFLAGS := -Ofast -fvectorize -fstrict-aliasing -munaligned-access -fslp-vectorize-aggressive -pipe -Qunused-arguments -Wno-unknown-warning-option
+CLANG_CONFIG_EXTRA_CFLAGS := -Ofast -fvectorize -munaligned-access -fslp-vectorize-aggressive -mllvm -bb-vectorize-aligned-only -pipe -Qunused-arguments -Wno-unknown-warning-option
+CLANG_CONFIG_EXTRA_CPPFLAGS := -Ofast -fvectorize -munaligned-access -fslp-vectorize-aggressive -pipe -Qunused-arguments -Wno-unknown-warning-option
 CLANG_CONFIG_EXTRA_LDFLAGS :=
 
 CLANG_CONFIG_EXTRA_CFLAGS += \
