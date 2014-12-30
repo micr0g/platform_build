@@ -49,15 +49,9 @@ $(combo_var_prefix)HAVE_STRLCPY := 0
 $(combo_var_prefix)HAVE_STRLCAT := 0
 $(combo_var_prefix)HAVE_KERNEL_MODULES := 0
 
-<<<<<<< HEAD
-$(combo_var_prefix)GLOBAL_CFLAGS := -fno-exceptions -Wno-multichar -ftree-vectorize -fgcse-sm -fgcse-las -pipe
-$(combo_var_prefix)RELEASE_CFLAGS := -Ofast -pipe -g -fno-strict-aliasing -fmodulo-sched -fmodulo-sched-allow-regmoves -ftree-vectorize
-$(combo_var_prefix)GLOBAL_CPPFLAGS := -Ofast -ftree-vectorize -fgcse-sm -fgcse-las -pipe
-=======
-$(combo_var_prefix)GLOBAL_CFLAGS := -O3 -fno-exceptions -Wno-multichar -ftree-vectorize -fgcse-sm -fgcse-las -pipe -fivopts
-$(combo_var_prefix)RELEASE_CFLAGS := -O3 -pipe -g -fno-strict-aliasing -fmodulo-sched -fmodulo-sched-allow-regmoves -ftree-vectorize -fivopts
-$(combo_var_prefix)GLOBAL_CPPFLAGS := -O3 -ftree-vectorize -fgcse-sm -fgcse-las -pipe -fivopts
->>>>>>> 084d3f9... enabled fivopts flag
+$(combo_var_prefix)GLOBAL_CFLAGS := -Ofast -fno-exceptions -Wno-multichar -ftree-vectorize -fgcse-sm -fgcse-las -pipe -fivopts
+$(combo_var_prefix)RELEASE_CFLAGS := -Ofast -pipe -g -fno-strict-aliasing -fmodulo-sched -fmodulo-sched-allow-regmoves -ftree-vectorize -fivopts
+$(combo_var_prefix)GLOBAL_CPPFLAGS := -Ofast -ftree-vectorize -fgcse-sm -fgcse-las -pipe -fivopts
 $(combo_var_prefix)GLOBAL_LDFLAGS := -Wl,-O1 -Wl,--as-needed -Wl,--relax -Wl,--sort-common -Wl,--gc-sections
 $(combo_var_prefix)GLOBAL_ARFLAGS := crsPD
 $(combo_var_prefix)GLOBAL_LD_DIRS :=
