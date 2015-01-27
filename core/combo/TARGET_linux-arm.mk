@@ -82,7 +82,7 @@ $(combo_2nd_arch_prefix)TARGET_arm_CFLAGS :=    -Ofast \
 
 # Modules can choose to compile some source as thumb.
 $(combo_2nd_arch_prefix)TARGET_thumb_CFLAGS :=  -mthumb \
-                        -O3 \
+                        -Os \
                         -fomit-frame-pointer \
                         -fno-strict-aliasing \
                         -ftree-vectorize \
